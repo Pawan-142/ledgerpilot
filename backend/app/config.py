@@ -9,8 +9,8 @@ load_dotenv(BASE_DIR / ".env")
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="allow")
 
-    PROJECT_NAME: str = "LedgerPilot"
-    PROJECT_DESCRIPTION: str = "AI Finance Controller — Reconcile. Investigate. Control."
+    PROJECT_NAME: str = "Avero"
+    PROJECT_DESCRIPTION: str = "Avero AI Finance Controller — Reconcile. Investigate. Control."
     API_V1_STR: str = "/api"
     
     # Groq Configuration
