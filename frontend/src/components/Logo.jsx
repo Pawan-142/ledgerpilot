@@ -1,217 +1,133 @@
 import React from 'react';
 
 /**
- * Unique Futuristic LedgerPilot Brand Logo
- * Features:
- * - The "Quantum Pilot Wing & 3-Way Tri-Facet Shield" (Interlocking Orders ➔ Gateway ➔ Settlement)
- * - 4-Point AI Spark Core Node
- * - Ultra-sleek Typography with gradient clip & interactive hover glow
+ * Official AVERO Brand Logo Component
+ * Matches the official geometric "A" with orbital ring & satellite node.
  */
 export function Logo({ 
-  title = 'Avero',
-  variant = 'aero', 
   size = 'md', 
   isCollapsed = false, 
   showSubtitle = true,
   className = '',
   onClick
 }) {
-  const COLOR_THEMES = {
-    aero: {
-      glow: 'from-cyan-500/40 via-sky-400/35 to-blue-500/35',
-      border: 'border-cyan-500/50 hover:border-sky-400',
-      wingLeft: ['#0284c7', '#0ea5e9', '#38bdf8'],
-      wingRight: ['#0891b2', '#06b6d4', '#67e8f9'],
-      wingBottom: ['#0369a1', '#0ea5e9'],
-      coreFlare: '#ffffff',
-      coreGlow: '#a5f3fc',
-      textGrad: 'from-cyan-400 via-sky-300 to-blue-400',
-      badgeBg: 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/25',
-      badgeText: 'Aero Pilot'
-    },
-    emerald: {
-      glow: 'from-emerald-500/40 via-teal-400/30 to-cyan-500/35',
-      border: 'border-emerald-500/50 hover:border-emerald-400',
-      wingLeft: ['#059669', '#10b981', '#34d399'],
-      wingRight: ['#0d9488', '#06b6d4', '#38bdf8'],
-      wingBottom: ['#047857', '#10b981'],
-      coreFlare: '#ffffff',
-      coreGlow: '#6ee7b7',
-      textGrad: 'from-emerald-400 via-teal-300 to-cyan-400',
-      badgeBg: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/25',
-      badgeText: 'AI 3-Way'
-    },
-    razorpay: {
-      glow: 'from-blue-600/40 via-cyan-400/30 to-indigo-500/35',
-      border: 'border-blue-500/50 hover:border-cyan-400',
-      wingLeft: ['#1d4ed8', '#2563eb', '#60a5fa'],
-      wingRight: ['#0284c7', '#06b6d4', '#38bdf8'],
-      wingBottom: ['#1e40af', '#3b82f6'],
-      coreFlare: '#ffffff',
-      coreGlow: '#93c5fd',
-      textGrad: 'from-blue-400 via-cyan-300 to-sky-400',
-      badgeBg: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/25',
-      badgeText: 'Track 04'
-    },
-    indigo: {
-      glow: 'from-indigo-600/40 via-purple-500/30 to-pink-500/35',
-      border: 'border-indigo-500/50 hover:border-purple-400',
-      wingLeft: ['#4338ca', '#6366f1', '#a5b4fc'],
-      wingRight: ['#7e22ce', '#a855f7', '#f472b6'],
-      wingBottom: ['#3730a3', '#6366f1'],
-      coreFlare: '#ffffff',
-      coreGlow: '#c084fc',
-      textGrad: 'from-indigo-400 via-purple-300 to-pink-400',
-      badgeBg: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/25',
-      badgeText: 'Groq'
-    },
-    gold: {
-      glow: 'from-amber-500/40 via-yellow-400/30 to-orange-500/35',
-      border: 'border-amber-500/50 hover:border-yellow-400',
-      wingLeft: ['#b45309', '#f59e0b', '#fcd34d'],
-      wingRight: ['#c2410c', '#f97316', '#fdba74'],
-      wingBottom: ['#92400e', '#d97706'],
-      coreFlare: '#ffffff',
-      coreGlow: '#fde047',
-      textGrad: 'from-amber-400 via-yellow-300 to-orange-400',
-      badgeBg: 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/25',
-      badgeText: 'FinOps'
-    }
-  };
-
-  const theme = COLOR_THEMES[variant] || COLOR_THEMES.emerald;
-
   const emblemSizes = {
     sm: 'w-7 h-7',
-    md: 'w-8 h-8',
-    lg: 'w-10 h-10',
-    xl: 'w-12 h-12'
+    md: 'w-9 h-9',
+    lg: 'w-11 h-11',
+    xl: 'w-14 h-14'
   };
 
   const textSizes = {
-    sm: 'text-xs',
-    md: 'text-sm',
-    lg: 'text-base',
-    xl: 'text-xl'
+    sm: 'text-sm tracking-wider',
+    md: 'text-base tracking-[0.2em]',
+    lg: 'text-xl tracking-[0.22em]',
+    xl: 'text-2xl tracking-[0.25em]'
   };
-
-  const idLeft = `lp-unique-left-${variant}`;
-  const idRight = `lp-unique-right-${variant}`;
-  const idBase = `lp-unique-base-${variant}`;
 
   return (
     <div 
       onClick={onClick}
-      className={`inline-flex items-center gap-2.5 select-none ${onClick ? 'cursor-pointer group' : ''} ${className}`}
+      className={`inline-flex items-center gap-3 select-none ${onClick ? 'cursor-pointer group' : ''} ${className}`}
     >
-      {/* Brand Icon Shield */}
+      {/* Official Avero Orbit Emblem */}
       <div className={`relative ${emblemSizes[size]} shrink-0 flex items-center justify-center`}>
-        {/* Dynamic Multi-Color Ambient Flare */}
-        <div className={`absolute inset-0 rounded-2xl bg-gradient-to-tr ${theme.glow} blur-[8px] opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300`} />
+        {/* Ambient Backlight Glow */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-emerald-500/30 via-cyan-400/25 to-sky-500/30 blur-[8px] opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
         
-        {/* Glassmorphic Cyber Frame */}
-        <div className={`relative w-full h-full rounded-xl bg-gradient-to-b from-[#0f172a] via-[#090e1a] to-[#040711] border ${theme.border} p-1.5 shadow-xl flex items-center justify-center overflow-hidden transition-all group-hover:shadow-2xl`}>
-          
-          {/* Subtle Grid / Scanline Backdrop */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(16,185,129,0.15),transparent_70%)]" />
+        {/* Vector SVG of Official Avero Mark */}
+        <svg 
+          viewBox="0 0 100 100" 
+          fill="none" 
+          xmlns="http://www.w3.org/2000/svg" 
+          className="w-full h-full relative z-10 transform group-hover:scale-105 transition-transform duration-300 drop-shadow-md"
+        >
+          <defs>
+            {/* Emerald to Cyan Gradient for A */}
+            <linearGradient id="avero-a-grad" x1="15" y1="85" x2="85" y2="15" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#00e676" />
+              <stop offset="35%" stopColor="#00c853" />
+              <stop offset="65%" stopColor="#00b0ff" />
+              <stop offset="100%" stopColor="#0091ea" />
+            </linearGradient>
 
-          {/* Precision 3-Way Vector Glyph */}
-          <svg 
-            viewBox="0 0 32 32" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg" 
-            className="w-full h-full transform group-hover:scale-105 transition-transform duration-300"
-          >
-            {/* Left Pilot Wing (Orders Facet) */}
-            <path 
-              d="M16 3L5 15L16 21L16 3Z" 
-              fill={`url(#${idLeft})`} 
-              opacity="0.95"
-            />
-            {/* Right Pilot Wing (Gateway Facet) */}
-            <path 
-              d="M16 3L27 15L16 21L16 3Z" 
-              fill={`url(#${idRight})`} 
-              opacity="0.95"
-            />
-            {/* Bottom Keel (Bank Settlement Facet) */}
-            <path 
-              d="M16 21L7 16.5L16 29L25 16.5L16 21Z" 
-              fill={`url(#${idBase})`} 
-              opacity="0.9"
-            />
+            {/* Orbit Gradient */}
+            <linearGradient id="avero-orbit-grad" x1="10" y1="75" x2="90" y2="25" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#00e676" />
+              <stop offset="60%" stopColor="#00e5ff" />
+              <stop offset="100%" stopColor="#00b0ff" />
+            </linearGradient>
 
-            {/* Inner Precision Interlocking Contours */}
-            <path 
-              d="M16 3L5 15L16 21L27 15L16 3Z" 
-              stroke="#ffffff" 
-              strokeWidth="0.75" 
-              strokeOpacity="0.4"
-              strokeLinejoin="round" 
-            />
-            <path 
-              d="M16 21L16 29" 
-              stroke="#ffffff" 
-              strokeWidth="0.75" 
-              strokeOpacity="0.5"
-            />
+            {/* Satellite Node Glow */}
+            <radialGradient id="avero-node-grad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="#e0f7fa" />
+              <stop offset="50%" stopColor="#80deea" />
+              <stop offset="100%" stopColor="#00b0ff" />
+            </radialGradient>
 
-            {/* Radiant 4-Point AI Spark Core (✦) */}
-            <g transform="translate(16, 15)">
-              <circle r="2.5" fill={theme.coreGlow} opacity="0.4" filter="blur(1px)" />
-              <path 
-                d="M0 -3.5L0.8 -0.8L3.5 0L0.8 0.8L0 3.5L-0.8 0.8L-3.5 0L-0.8 -0.8Z" 
-                fill={theme.coreFlare} 
-              />
-            </g>
+            <filter id="node-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+            </filter>
+          </defs>
 
-            {/* Gradients */}
-            <defs>
-              <linearGradient id={idLeft} x1="5" y1="3" x2="16" y2="21" gradientUnits="userSpaceOnUse">
-                <stop stopColor={theme.wingLeft[0]} />
-                <stop offset="0.5" stopColor={theme.wingLeft[1]} />
-                <stop offset="1" stopColor={theme.wingLeft[2]} />
-              </linearGradient>
+          {/* Background Orbit Arc (Behind 'A') */}
+          <path
+            d="M 16 68 C 10 58 12 40 28 30 C 44 20 68 18 84 28"
+            stroke="url(#avero-orbit-grad)"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+            fill="none"
+            opacity="0.8"
+          />
 
-              <linearGradient id={idRight} x1="27" y1="3" x2="16" y2="21" gradientUnits="userSpaceOnUse">
-                <stop stopColor={theme.wingRight[0]} />
-                <stop offset="0.5" stopColor={theme.wingRight[1]} />
-                <stop offset="1" stopColor={theme.wingRight[2]} />
-              </linearGradient>
+          {/* Geometric 'A' Body */}
+          {/* Left Leg (Emerald) */}
+          <path
+            d="M 18 80 L 46 16 C 48 12 52 12 54 16 L 82 80 C 83 83 80 86 76 84 L 64 77 C 62 76 60 74 60 71 L 50 42 L 36 68 L 22 84 C 19 86 16 83 18 80 Z"
+            fill="url(#avero-a-grad)"
+          />
 
-              <linearGradient id={idBase} x1="16" y1="16.5" x2="16" y2="29" gradientUnits="userSpaceOnUse">
-                <stop stopColor={theme.wingBottom[0]} />
-                <stop offset="1" stopColor={theme.wingBottom[1]} />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+          {/* Foreground Orbit Arc (In Front of 'A') */}
+          <path
+            d="M 84 28 C 92 34 94 48 82 60 C 66 76 34 84 16 68"
+            stroke="url(#avero-orbit-grad)"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+            fill="none"
+          />
+
+          {/* Orbiting Satellite Sphere */}
+          <circle 
+            cx="76" 
+            cy="30" 
+            r="6" 
+            fill="url(#avero-node-grad)" 
+          />
+          <circle 
+            cx="76" 
+            cy="30" 
+            r="8" 
+            fill="#00e5ff" 
+            opacity="0.3"
+            filter="url(#node-glow)" 
+          />
+        </svg>
       </div>
 
-      {/* Brand Typography & Micro Pill */}
+      {/* Official Avero Wordmark */}
       {!isCollapsed && (
         <div className="min-w-0">
-          <div className="flex items-center gap-1.5 leading-none">
-            <span className={`font-black tracking-tight text-slate-900 dark:text-slate-100 ${textSizes[size]}`}>
-              {title === 'Avero' ? (
-                <>
-                  Av<span className={`bg-gradient-to-r ${theme.textGrad} bg-clip-text text-transparent font-extrabold`}>ero</span>
-                </>
-              ) : title === 'LedgerPilot' ? (
-                <>
-                  Ledger<span className={`bg-gradient-to-r ${theme.textGrad} bg-clip-text text-transparent font-extrabold`}>Pilot</span>
-                </>
-              ) : (
-                <span className={`bg-gradient-to-r ${theme.textGrad} bg-clip-text text-transparent font-extrabold`}>{title}</span>
-              )}
+          <div className="flex items-center gap-2 leading-none">
+            <span className={`font-extrabold uppercase text-slate-900 dark:text-white ${textSizes[size]} tracking-[0.22em]`}>
+              AVERO
             </span>
-            <span className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded-full border shrink-0 tracking-wider ${theme.badgeBg}`}>
-              {theme.badgeText}
+            <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-500/10 dark:bg-emerald-400/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/25 tracking-wider">
+              AI
             </span>
           </div>
           {showSubtitle && (
             <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium tracking-tight truncate mt-1">
-              AI 3-Way Reconciliation
+              3-Way Financial Reconciliation
             </p>
           )}
         </div>
