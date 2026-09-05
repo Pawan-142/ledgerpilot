@@ -1,5 +1,9 @@
-const BASE = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/$/, '') : '';
-const API_BASE = BASE ? `${BASE}/api` : '/api';
+const DEFAULT_CLOUD_BACKEND = 'https://ledgerpilot-production-7adb.up.railway.app';
+const BASE = import.meta.env.VITE_API_URL 
+  ? import.meta.env.VITE_API_URL.replace(/\/$/, '') 
+  : (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? '' : DEFAULT_CLOUD_BACKEND);
+
+const API_BASE = `${BASE}/api`;
 
 export const api = {
   // Health
